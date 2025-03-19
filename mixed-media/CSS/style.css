@@ -1,0 +1,40 @@
+*{
+    color: #073B3A;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+table, th, td{
+    border: 2px solid #6BBF59;
+    background-color: hsl(0, 0%, 0%);
+}
+table{
+    margin: 0 auto;
+}
+body{
+    background-image: url(https://assets.www.warnerbroslatino.com/drupal-root/public/promopod/media/browser/cyberpunk_1920x1536.jpg);
+    background-attachment: fixed;
+}
+th{
+    background: linear-gradient(#08A045,#DDB771);
+}
+td{
+    background: #DDB771;
+}
+img,video{
+    border-radius: 5px;
+    border: 2px solid hsl(0, 0%, 0%);
+    box-shadow: 2px 4px rgb(5, 5, 5);
+    width: 200px;
+    height: 150px;
+}
+audio{
+    border-radius: 30px;
+    border: 2px solid #0B6E4F;
+    box-shadow: 2px 4px rgba(5, 5, 5, 0.308);
+}
+ul,ol,li{
+    display: block;
+}
+.sources,.benefits,.top,.tablecaption{
+    background: hsla(39, 61%, 65%, 0.568);
+}

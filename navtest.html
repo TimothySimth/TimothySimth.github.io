@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proper Navigation Bar</title>
+    
+    <style>
+        * { font-family: sans-serif; }
+        nav {
+            background: green;
+            width: 100%;
+            padding: 10px;
+            font-family:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+            top: 0;
+            left: 0;
+            position: fixed;
+            z-index: 999;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        nav a {
+            font-weight: bold;
+            color: rgb(173, 255, 47);
+            background: rgb(51, 51, 51);
+            padding: 10px;
+            text-decoration: none;
+        }
+
+        nav a:hover { background: rgb(119, 119, 119);}
+
+        main { padding-top: 3.5rem;}
+        body { background: lightblue; color:  rgb(17, 17, 17); }
+        footer {text-align: center;}
+
+        @media (max-width: 768px) {
+            body { background: rgb(47, 79, 79); color: white;}
+            main { padding-top: 30vh;}
+            nav a { border: 1px solid rgb(255, 255, 255); text-align: center;}
+        }
+
+        @media (max-width: 480px) {
+            body { background:  linear-gradient(90deg, rgb(0, 0, 139), rgb(72, 61, 139));}
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#top">Top</a>
+        <a href="#bot">Bottom</a>
+        <a href="#">Link1</a>
+        <a href="#">Link2</a>
+        <a href="#">Link3</a>
+    </nav>
+    <main id="top">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non purus eu lorem pellentesque commodo. Maecenas finibus, erat ut feugiat bibendum, arcu elit tincidunt nisl, ac cursus leo justo eget metus. Morbi eget varius eros. Cras commodo dolor commodo elit sollicitudin, ut efficitur justo commodo. Praesent lectus magna, eleifend sed porttitor eget, aliquam at diam. Duis imperdiet urna dui, id congue turpis mollis non. Nulla viverra augue purus, suscipit sagittis erat sodales vitae. Nullam aliquet leo non euismod luctus. Cras tempor tempus turpis ac pretium.
+            Donec et felis purus. Morbi accumsan faucibus imperdiet. Aenean sollicitudin turpis risus, et blandit ligula hendrerit non. Fusce tempus, risus a accumsan convallis, lectus metus laoreet neque, rutrum blandit est diam in erat. In sed vulputate justo. Donec justo quam, pulvinar viverra nunc sed, euismod tincidunt urna. Aliquam felis ligula, mollis at viverra eu, luctus sed tortor. Vivamus ornare tortor turpis. Vivamus est eros, facilisis sit amet laoreet non, interdum sit amet risus. Suspendisse magna urna, bibendum vel mi in, lobortis commodo urna. Phasellus non sollicitudin dui. Curabitur quis velit dui. Cras consequat erat vel ante scelerisque, id pellentesque urna fringilla. Donec venenatis dignissim tempor. Proin finibus, erat eget gravida accumsan, lorem libero interdum est, eu ultrices eros risus in ex. Sed interdum metus interdum libero porttitor consequat.
+            Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer in rhoncus arcu. Nulla efficitur ullamcorper consectetur. Fusce sed velit tincidunt, finibus diam eu, dignissim dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel ullamcorper dolor. Suspendisse finibus commodo enim et scelerisque. Nunc eu nulla nibh. Fusce vel purus sed lectus sollicitudin tincidunt eu ut nunc. Nam pretium odio in tincidunt iaculis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed blandit elit in libero ultrices, eu malesuada dui facilisis. Vivamus vitae ornare orci. Ut elementum commodo imperdiet. Nullam lectus enim, gravida sit amet nulla at, viverra tincidunt libero.
+            Sed ac justo a turpis ultrices condimentum. In imperdiet, metus commodo commodo tincidunt, purus nisl tincidunt quam, non dignissim arcu nisl vitae ligula. Integer in dignissim neque, nec maximus quam. Pellentesque hendrerit eleifend lacinia. Sed sodales ultricies est sed dignissim. Aliquam placerat risus eu tristique interdum. Aliquam consequat placerat leo sed elementum. Cras interdum faucibus vehicula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+            Suspendisse finibus massa metus, et ultricies diam venenatis luctus. Nulla facilisi. Curabitur eget nisl fringilla, imperdiet eros nec, consequat mi. Pellentesque dictum quam mi, in facilisis justo posuere in. Nam eget rutrum ligula. Integer at auctor erat. Sed vitae est at nisi vulputate ultrices ac at neque. Etiam urna ex, venenatis in luctus et, tempor eu nulla. Proin cursus mauris risus. Aenean luctus elit vitae ipsum gravida, sed pharetra ipsum bibendum. Ut vel pretium nunc, id rutrum lacus. Curabitur dapibus eu lacus ac posuere.
+        </p>
+    </main>
+    <footer id="bot">
+        <b>This is the bottom of the page!</b>
+    </footer>
+</body>
+</html>
