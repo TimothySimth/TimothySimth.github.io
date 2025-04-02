@@ -1,24 +1,61 @@
-* {
-    font-family: "Freight Sans Bold", "Lucida Grande", Tahoma, Verdana, Arial, sans-serif ;
-    text-align: left;
 
+*{
+    align-content: center;
+    justify-items: center;
+    font-family: "Freight Sans Bold", "Lucida Grande", Tahoma, Verdana, Arial, sans-serif;
+    text-decoration: none;
+    kerning: normal;
 }
 
-input {
-    width: 96%;
+input{
+    margin: auto;
+    padding: 8px;
+    width: 92.5%;
+}
+#first, #last{
+    width: 43%;
+}
+button{
+    margin: 0 auto;
     padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    width: 150px;
+    background-color: #659d50;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    border-width: 2px;
+    font-size: large;
+    color: white;
+    
+}
+.button{
+    display: flex;
+    justify-self: left;
+}
+button:hover{
+    background-color: lightgray;
+    border-style: dotted;
 }
 
-#first, #last {
-    width: 46%;
-    align-items: center;
-    justify-content: center;
-
-}
-#mal, #fem {
-    width: 6%;
+select{
+    padding: 5px;
+    font-weight: bold;
 }
 
+.radio{
+    display: flex;
+    width: 30%;
+    padding: 5px;
+}
+
+a {
+    font-size: 10px;
+}
+body{
+    background: #edf0f5;
+}
+footer{
+    font-size: 11px;
+}
+h1,p,a{
+    justify-self: flex-start;
+}
