@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prog52a</title>
+</head>
+<body>
+    <label for="len">Langth: </label>
+    <input type="number" id="len" name="len" value="0" required>
+    <label for="wid">Width: </label>
+    <input type="number" id="wid" name="wid" value="0" required>
+    <button onclick="
+        let len = document.getElementById('len').value;
+        let wid = document.getElementById('wid').value;
+        let area = len * wid;
+        let perim = 2 * (len + wid);
+        document.writeln('Area: ' + area + ' Perimeter: ' + perim);
+    ">Calc</button>
+
+</body>
+</html>

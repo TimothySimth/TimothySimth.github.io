@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prog54c</title>
+</head>
+<body>
+    <label for="rad">Radius</label>
+    <input type="number" id="rad" name="rad" value="0" required>
+    <button onclick="
+        let rad = number(document.getElementById('rad').value);
+        let area = Math.PI * rad**2;
+        let perim = 2 * Math.PI * rad;
+        document.writeln('Area: ' + area + ' Perimeter: ' + perim);
+    ">Calc</button>
+    </body>
+</html>

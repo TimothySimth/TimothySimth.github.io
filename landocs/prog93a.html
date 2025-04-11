@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prog93a</title>
+    <script src="prog93a.js" defer></script>
+</head>
+<body>
+    <label for="kwu">Kilowatts Used</label>
+    <input type="number" id="kwu" name="kwu">
+    <button onclick="doMath()">Do Math Stuff</button>
+    <button onclick="reset()">Reset</button>
+    <p id="output"></p>
+
+    <script>
+        function reset() {
+            document.getElementById('output').innerHTML = "";
+        }
+    </script>
+</body>
+</html>

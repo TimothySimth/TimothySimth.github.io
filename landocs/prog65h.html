@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prog65h</title>
+</head>
+<body>
+    <label for="pnds">Pounds: </label>
+    <input type="number" id="pnds" required>
+    <label for="shls">Shillings: </label>
+    <input type="number" id="shils" required>
+    <label for="pnce">Pence: </label>
+    <input type="number" id="pnce" required>
+    <button onclick="
+        let pnds = Number(document.getElementById('pnds').value);
+        let shils = Number(document.getElementById('shils').value);
+        let pnce = Number(document.getElementById('pnce').value);
+        let decp = (pnds/12/20) + (shils / 20) + pnce;
+        decp = decp.toFixed(2);
+        document.writeln('Decimal pounds = $' + decp);    
+    
+    ">Calc</button>
+        
+</body>
+</html>
