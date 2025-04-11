@@ -5,7 +5,7 @@ function doMath() {
     let tax = base * 0.03;
     let surcharge = base * 0.1;
     let total = base + tax + surcharge;
-    let late = total + (total * 0.04);
+    let late = total + total * 0.04;
     let out = "";
     out += "Base Rate " + kwu + " @ $0.0475 $ " + base.toFixed(2) + "</br>";
     out += "Tax: $ " + tax.toFixed(2) + "</br>";
