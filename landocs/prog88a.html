@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prog88a</title>
+</head>
+  <body>
+  <label for="num1">Enter Number Between 1-13</label><input type="number" id="num1" min="1" max="13"> <br>
+    <label for="num2"></label>Enter Number Between 2-20<input type="number" id="num2" min="2" max="20"> <br>
+    <button onclick="calc()">Calc</button>
+    <pre id="output"></pre>
+
+    <script>
+      function calc() {
+        let num1 = Number(document.getElementById('num1').value);
+        let num2 = Number(document.getElementById('num2').value);
+
+        let out = document.getElementById('out1');
+        out = "Original numbers are: " + num1 + " and " + num2 + "\n";
+        out += "Sum : " + (num1 + num2) + "\n";
+        out += "Difference : " + (num1 - num2) + "\n";
+        out += "Product : " + (num1 * num2) + "\n";
+        out += "Average : " + ((num1 + num2)/2) + "\n";
+        out += "Absolute value : " + Math.abs(num1 - num2) + "\n";
+        out += "Max : " + Math.max(num1, num2) + "\n";
+        out += "Min : " + Math.min(num1, num2) + "\n";
+
+        document.getElementById("output").innerHTML = out;
+
+      }
+      </script>
+  </body>
+</html>
