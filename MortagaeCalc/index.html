@@ -2,9 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prog122b</title>
+    <script src="./js/script.js" defer></script>
 </head>
 <body>
+<label for="principal">Principal: </label><input type="number" id="principal"> <br>
+<label for="interest rate"></label>Interest Rate as % (e.g 7.9): <input type="number" id="interest rate"> <br>
+<label for="numYears"></label>Number of Years: <input type="number" id="numYears"> <br>
+<label for="monPayment"></label>Monthly Payment: <input type="number" id="monPayment"> <br>
+<button onclick="doMath()">Calculate</button>
+<button onclick="clear()">Clear</button>
+<pre id="output"></pre>
 
+<script>
+    function clear() {
+        document.getElementById('output').innerHTML = "";
+        document.getElementById('principal').value = "";
+        document.getElementById('interest').value = "";
+        document.getElementById('numYears').value = "";
+        document.getElementById('monPayment').value = "";
+    }
+</script>
 </body>
 </html>
