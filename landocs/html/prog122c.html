@@ -2,9 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Prog122c</title>
+    <script src="../js/prog122c.js" defer></script>
 </head>
 <body>
+    <button onclick="doMath()">Do Math Stuff</button>
+    <button onclick="reset()">Reset</button>
+    <pre id="output"></pre>
 
+
+    <script>
+        function reset() {
+            document.getElementById('output').innerHTML = "";
+        }
+    </script>
 </body>
 </html>
