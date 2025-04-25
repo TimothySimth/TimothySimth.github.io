@@ -3,8 +3,14 @@ function f(n){
     return n * f(n - 1);
 }
 function doMath() {
-    let n = Number(document.getElementById("num1"));
-    document.getElementById("output").innerHTML = f(n).toString();
+    let n = Number(document.getElementById("num1").value);
+    let tot = n;
+    for (let lcv = n-1; lcv > 1; lcv--){
+        tot *= lcv;
+    }
+    document.getElementById("output").innerHTML = "!" + n + " is " + tot.toString();
+    // With recursion
+    // document.getElementById("output").innerHTML = "!" + n + " is " + f(n).toString();
 
 }
 
