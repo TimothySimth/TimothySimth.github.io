@@ -9,6 +9,7 @@ function doMath() {
         tot *= lcv;
     }
     document.getElementById("output").innerHTML = "!" + n + " is " + tot.toString();
+
     // With recursion
     // document.getElementById("output").innerHTML = "!" + n + " is " + f(n).toString();
 
