@@ -5,3 +5,7 @@ function doMath() {
     }
     document.getElementById("output").innerHTML = out;
 }
+
+function reset() {
+    document.getElementById('output').innerHTML = "";
+}
