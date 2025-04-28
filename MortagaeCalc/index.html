@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,12 +16,14 @@
 
 </head>
 <body>
-<div class="card" style="width: 20rem;">
-    <div class="card-header">
+<div class="overflow-hidden">
+<div class="row justify-content-center" style="margin-top: 2.5rem">
+<div class="card text-center mb-3" style="width: 21rem; ">
+    <div class="card-header" >
         Remaining Mortgage Balance Calculator
     </div>
     <div class="card-body">
-        <ul class="list-group list-group-flush">
+        <ul class="list-group list-group-flush" style="width: 100%;">
         <li class="list-group-item">
             <label id="pri" for="principal">Principal: </label>
             <input type="number" id="principal"> <br>
@@ -42,13 +44,15 @@
 
 
 
-        <button onclick="doMath()" class="btn btn-primary">Calculate</button>
-        <button onclick="reset()" class="btn btn-warning">Reset</button>
+        <button onclick="doMath()" class="btn">Calculate</button>
+        <button onclick="reset()" class="btn">Reset</button>
     </div>
     <div class="card-footer text-muted">
         <pre id="output"></pre>
     </div>
 
+</div>
+</div>
 </div>
 
 

@@ -9,7 +9,7 @@ function doMath() {
     b -= (m * (compoundFactor-1)) / (r / n);
 
     let out = "";
-    out += "Your remaining loan balance is: " + b.toFixed(2);
+    out += "Remaining loan balance is: " + b.toFixed(2);
     document.getElementById("output").innerHTML = out;
 }
 
