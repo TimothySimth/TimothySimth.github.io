@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prog52a List</title>
+    <script src="../js/prog162a.js" defer></script>
+</head>
+<body>
+    <script>
+        let num1 = randInt(1, 10);
+        let num2 = randInt(2, 10);
+        let ap = getAreaAndPerim(num1, num2);
+        let area = ap[0];
+        let perim = ap[1];
+        document.getElementById("output").innerHTML = "Length: " + num1 + "<br>" + "Width: " + num2 + "<br>" + "Area: " + area + "<br>" + "Perim: " + perim;
+    </script>
+    <p id="output"></p>
+
+</body>
+</html>

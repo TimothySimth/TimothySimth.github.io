@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>PyScript</title>
+<link rel="stylesheet" href="https://pyscript.net/releases/2022.12.1/pyscript.css" />
+<script defer src="https://pyscript.net/releases/2022.12.1/pyscript.js"></script>
+</head>
+<body>
+    <py-script>
+        def fac(n):
+            if n <= 1: return 1
+            return n * fac(n-1)
+
+        print(fac(int(input("Pick a number !"))))
+    </py-script>
+</body>
+</html>
