@@ -1,40 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Home Page</title>
-    <script src="./js/index.js" defer></script>
-    <link rel="stylesheet" href="./css/index.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js" integrity="sha256-AlTido85uXPlSyyaZNsjJXeCs07eSv3r43kyCVc8ChI=" crossorigin="anonymous"></script>
-    <style>
-        * {
-            background: black;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mouse-Follow Card</title>
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoJoWUOzvh9lE3zzZj3twYy58u4+Ogpp+IlRH9sENBO0LRn"
+    crossorigin="anonymous"
+  />
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+      background-color: #f8f9fa;
+    }
+    .follow-card {
+      position: absolute;
+      width: 200px;
+      transition: transform 0.05s ease-out;
+    }
+  </style>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg bg-light">
-<ul class="nav flex-column">
-    <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">Active</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link disabled">Disabled</a>
-    </li>
-</ul>
-</nav>
+  <div class="card follow-card" id="mouseCard">
+    <img src="https://via.placeholder.com/200x100" class="card-img-top" alt="Placeholder">
+    <div class="card-body">
+      <h5 class="card-title">Floating Card</h5>
+      <p class="card-text">Click and hold the button below to move this card.</p>
+      <button id="dragBtn" class="btn btn-primary">Drag Card</button>
+    </div>
+  </div>
 
+  <!-- Bootstrap Bundle with Popper -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    /**
+     * Enables dragging of a card element by a specified button.
+     * @param {string} cardId - The ID of the card element.
+     * @param {string} buttonId - The ID of the button inside the card.
+     */
+    function enableCardDrag(cardId, buttonId) {
+      const card = document.getElementById(cardId);
+      const dragBtn = document.getElementById(buttonId);
+      let isDragging = false;
+      let offsetX = 0;
+      let offsetY = 0;
 
+      // Start dragging
+      dragBtn.addEventListener('mousedown', (event) => {
+        event.preventDefault();
+        isDragging = true;
+        const rect = card.getBoundingClientRect();
+        offsetX = event.clientX - rect.left;
+        offsetY = event.clientY - rect.top;
+      });
 
+      // Stop dragging
+      document.addEventListener('mouseup', () => {
+        isDragging = false;
+      });
+
+      // Handle movement
+      document.addEventListener('mousemove', (event) => {
+        if (!isDragging) return;
+        const x = event.clientX - offsetX;
+        const y = event.clientY - offsetY;
+        card.style.transform = `translate(${x}px, ${y}px)`;
+      });
+    }
+
+    // Initialize drag functionality once DOM is loaded
+    document.addEventListener('DOMContentLoaded', () => {
+      enableCardDrag('mouseCard', 'dragBtn');
+    });
+  </script>
 </body>
 </html>
