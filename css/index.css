@@ -1,3 +1,33 @@
+* {
+    font-family: "Fira Code Medium", monospace;
+}
+#body {
+    background-image: linear-gradient(to right, rgb(50,50,50), rgb(20,20,20));
+}
+
 .navbar {
     background-color: #2b2b2b;
+}
+.follow-card {
+    background-color: transparent !important;
+    invert()
+    position: absolute;
+    width: 40px;
+    transition: transform 0.05s ease-out;
+    border-radius: 15px;
+}
+#dragBtn {
+    background-color: transparent !important;
+    border-radius: 15px;
+    width: 40px;
+}
+.bi {
+    color: #ffffff;
+}
+#am, #h5 {
+    color: #ffffff !important;
+}
+#ctc {
+    color: #ffffff !important;
+    font-size: x-small !important;
 }

@@ -11,8 +11,8 @@
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js" integrity="sha256-AlTido85uXPlSyyaZNsjJXeCs07eSv3r43kyCVc8ChI=" crossorigin="anonymous"></script>
 </head>
-<body>
-    <nav class="navbar sticky-top bg-light ">
+<body id="body">
+    <nav class="navbar bg-light ">
      <div class="container-fluid">
          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
              <span class="navbar-toggler-icon"></span>
@@ -29,18 +29,19 @@
          </div>
      </div>
     </nav>
-    <div class="card" style="width: 18rem;" id="mouseCard">
+    <div class="card" style="width: 18rem; background-color: transparent;" id="mouseCard">
         <div class="card follow-card" role="group">
-            <button id="dragBtn" class="btn" style="width: 5px; ">
+            <button id="dragBtn">
                 <i class="bi bi-circle"></i>
             </button>
             
         </div>
         <div class="card-body">
+            <h5 id="h5">Hello</h5>
+            <p id="am">My name is Timothy</p>
+            <p id="ctc">Click the circle</p>
 
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+
         </div>
     </div>
 
